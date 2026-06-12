@@ -1,0 +1,346 @@
+/* --- CONFIGURATION GÉNÉRALE & CHARTE JUNIA --- */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+h1, h2, h3, .nav-links a, .logo {
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* --- HEADER --- */
+header {
+    background-color: #6B2C91;
+    color: white;
+    padding: 15px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.logo-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: white;
+}
+
+.logo-sub {
+    font-size: 10px;
+    text-transform: uppercase;
+    opacity: 0.8;
+    color: white;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    transition: opacity 0.2s;
+}
+
+.nav-links a:hover, .nav-links a.active {
+    text-decoration: underline;
+    opacity: 0.9;
+}
+
+.btn-profile {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+    padding: 8px 15px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    border: 1px solid rgba(255,255,255,0.4);
+    transition: background 0.2s;
+}
+
+.btn-profile:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* --- FOOTER --- */
+footer {
+    background-color: #6B2C91;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: auto;
+    font-size: 14px;
+}
+
+footer a {
+    color: white;
+    text-decoration: underline;
+}
+
+/* --- CONTENEURS ET FORMULAIRES --- */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.page-title {
+    border-left: 5px solid #6B2C91;
+    padding-left: 15px;
+    margin-bottom: 30px;
+    font-size: 24px;
+    color: #111;
+}
+
+.login-card {
+    background: white;
+    max-width: 450px;
+    margin: 60px auto;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+.form-control {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    outline: none;
+    font-size: 14px;
+    transition: border-color 0.2s;
+}
+
+.form-control:focus {
+    border-color: #6B2C91;
+}
+
+.btn-orange {
+    display: block;
+    width: 100%;
+    max-width: 280px;
+    margin: 25px auto 0 auto;
+    background-color: #F39200;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.2s;
+}
+
+.btn-orange:hover {
+    background-color: #d67e00;
+}
+
+.form-footer {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 13px;
+}
+
+.form-footer a {
+    color: #0056b3;
+    text-decoration: none;
+}
+
+/* --- GRILLE DU CATALOGUE --- */
+.catalogue-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.filter-select {
+    padding: 8px 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-family: inherit;
+    outline: none;
+}
+
+.student-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+/* --- CARTE ÉTUDIANT --- */
+.student-card {
+    background: white;
+    border: 2px solid #F39200;
+    border-radius: 8px;
+    padding: 20px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.student-card:hover {
+    transform: scale(1.04) !important;
+    box-shadow: 0 8px 24px rgba(107, 44, 145, 0.25) !important;
+}
+
+.student-card:hover .cv-icon {
+    transform: scale(1.2) !important;
+}
+
+.checkbox-container {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    z-index: 2;
+}
+
+.checkbox-container input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    accent-color: #6B2C91;
+}
+
+.cv-icon {
+    width: 70px;
+    height: 90px;
+    border: 3px solid #333;
+    border-radius: 4px;
+    margin: 20px 0;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 6px;
+    padding: 10px;
+    transition: transform 0.25s ease;
+}
+
+.cv-icon::before {
+    content: '';
+    position: absolute;
+    top: -3px;
+    right: -3px;
+    border-width: 12px;
+    border-style: solid;
+    border-color: #f9f9f9 #f9f9f9 #333 #333;
+    border-radius: 0 4px 0 0;
+}
+
+.cv-line {
+    height: 4px;
+    background-color: #333;
+    width: 100%;
+    border-radius: 2px;
+}
+
+.student-name {
+    width: 100%;
+    border-top: 2px solid #F39200;
+    padding-top: 12px;
+    margin-top: auto;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+/* --- LISTES DE SÉLECTION & HISTORIQUE --- */
+.selection-box {
+    background: white;
+    border: 2px solid #F39200;
+    border-radius: 8px;
+    padding: 30px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.selection-title {
+    color: #F39200;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.student-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 25px;
+    padding: 10px 25px;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.student-info {
+    font-weight: 600;
+}
+
+.date-picker {
+    padding: 6px 12px;
+    border-radius: 15px;
+    border: 1px solid #ccc;
+    outline: none;
+    font-family: inherit;
+}
+
+.date-badge {
+    background-color: #e9e9e9;
+    padding: 6px 15px;
+    border-radius: 15px;
+    font-size: 13px;
+    font-weight: 600;
+}
